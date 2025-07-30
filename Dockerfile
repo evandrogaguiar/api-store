@@ -7,6 +7,8 @@ COPY src src
 CMD ["npm", "run", "dev"]
 
 FROM node:22-alpine AS prod-dependencies
+
+WORKDIR /app
 COPY package*.json .
 RUN npm ci --only=production
 

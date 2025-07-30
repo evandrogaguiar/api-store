@@ -7,14 +7,15 @@ replicaCount: 1
 
 # This sets the container image more information can be found here: https://kubernetes.io/docs/concepts/containers/images/
 image:
-  repository: lmacademy/config-store
+  repository: 598357934820.dkr.ecr.us-east-1.amazonaws.com/api-store
   # This sets the pull policy for images.
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "1.0.0"
+  tag: "8dcab93f4c0da221e707cb7d1590d7308cf0307c"
 
 # This is for the secrets for pulling an image from a private repository more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
-imagePullSecrets: []
+imagePullSecrets:
+  - name: ecr-credentials
 # This is to override the chart name.
 nameOverride: ""
 fullnameOverride: ""

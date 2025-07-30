@@ -1,8 +1,7 @@
 name: GitOps Helm Pipeline
 
 on:
-  push:
-    branches: [main, staging]
+  workflow_dispatch:
 
 env:
   ECR_REPOSITORY: api-store
